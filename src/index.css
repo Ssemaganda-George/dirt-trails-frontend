@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 30 20% 98%;
+    --foreground: 20 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 15%;
+
+    --primary: 142 58% 49%;
+    --primary-foreground: 60 9% 98%;
+
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 60 9% 98%;
+
+    --muted: 30 10% 95%;
+    --muted-foreground: 25 5% 45%;
+
+    --accent: 142 58% 49%;
+    --accent-foreground: 60 9% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 20 5% 90%;
+    --input: 20 5% 90%;
+    --ring: 142 58% 49%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 10% 10%;
+    --foreground: 60 9% 98%;
+
+    --card: 20 10% 12%;
+    --card-foreground: 60 9% 98%;
+
+    --popover: 20 10% 12%;
+    --popover-foreground: 60 9% 98%;
+
+    --primary: 142 58% 49%;
+    --primary-foreground: 60 9% 98%;
+
+    --secondary: 24 95% 53%;
+    --secondary-foreground: 60 9% 98%;
+
+    --muted: 20 10% 20%;
+    --muted-foreground: 60 9% 80%;
+
+    --accent: 142 58% 49%;
+    --accent-foreground: 60 9% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9% 98%;
+
+    --border: 20 10% 20%;
+    --input: 20 10% 20%;
+    --ring: 142 58% 49%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply font-semibold leading-tight;
+  }
+
+  .container {
+    @apply px-4 mx-auto;
+    max-width: 1280px;
+  }
+
+  .hero-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .section {
+    @apply py-16;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
